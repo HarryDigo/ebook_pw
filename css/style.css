@@ -16,3 +16,57 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.center_content {
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+span.small {font-size: smaller;}
+
+/*Navbar horizontal do header (peguei do w3schools, mas entendo como funciona e fiz minhas mudanças)*/
+
+ul.my_navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #292d32;
+}
+
+ul.horizontal.my_navbar li {
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+}
+
+ul.horizontal.my_navbar li:first-child{margin:0}
+
+ul.my_navbar li a:hover:not(.active) {background-color: #111519;}
+
+ul.horizontal.my_navbar li a {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 100%;
+    padding: 0px 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+    background-color: #313539;
+}
+
+ul.vertical.my_navbar li a {
+    display: block;
+    color: white;
+    padding: 16px 0 16px 0;
+    text-decoration: none;
+}
+
+ul.vertical.my_navbar li {margin-top: 10px;}
+
+ul.vertical.my_navbar li:first-child {margin:0;}
+
+ul.vertical.my_navbar li a {background-color: #313539;}
