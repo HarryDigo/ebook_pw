@@ -47,17 +47,17 @@ ul.my_navbar li a:hover:not(.active) {background-color: #111519;}
 ul.horizontal.my_navbar li {
     float: left;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 ul.horizontal.my_navbar li a {
     text-align: center;
     height: 100%;
     padding: 0px 24px;
 }
-ul.horizontal.my_navbar li:first-child{margin:0}
+ul.horizontal.my_navbar li:first-child{margin-left: 5px;}
 
-ul.vertical.my_navbar li {margin-top: 10px;}
+ul.vertical.my_navbar li {margin-top: 5px;}
 ul.vertical.my_navbar li a {padding: 16px 0 16px 0;}
-ul.vertical.my_navbar li:first-child {margin:0;}
+ul.vertical.my_navbar li:first-child {margin-top: 5px;}
 
 /*Fim do navbar*/
