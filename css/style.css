@@ -1,0 +1,73 @@
+.center_content { /*centraliza o conteúdo interno*/
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.horizontal_center { /*centraliza o conteudo interno horizontalmente*/
+    display: flex;
+    justify-content: center;
+}
+
+.vertical_center { /*centraliza o conteudo interno verticalmente*/
+    display: flex;
+    justify-content: center;
+}
+
+.active { /*botão ativo*/
+    background-color: #5096f0 !important;
+    cursor: default !important;
+}
+
+span.small {font-size: smaller;} /*fonte menor (copyright e coisas assim)*/
+
+.page {padding: 40px 120px;}
+
+div.title:first-child {margin: 0 0 30px 0;}
+div.title {margin: 30px 0 30px 0;}
+
+img {max-width: 100%;}
+
+/*Navbar(s) (Template originalmente de https://www.w3schools.com/css/css_navbar.asp, mas completamente modificado)
+
+geral*/
+
+ul.my_navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #292d32;
+}
+ul.my_navbar li a {
+    display: block;
+    background-color: #313539;
+    color: white;
+    transition: all 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+ul.my_navbar li a:hover:not(.active) {background-color: #111519;}
+
+/*horizontal*/
+
+ul.horizontal.my_navbar li {
+    float: left;
+    height: 100%;
+    margin-left: 5px;
+}
+ul.horizontal.my_navbar li a {
+    text-align: center;
+    height: 100%;
+    padding: 0px 24px;
+}
+ul.horizontal.my_navbar li:first-child{margin-left: 5px;}
+
+/*vertical*/
+
+ul.vertical.my_navbar li {margin-top: 5px;}
+ul.vertical.my_navbar li a {padding: 16px 0 16px 0;}
+ul.vertical.my_navbar li:first-child {margin-top: 5px;}
+
+/*Fim do navbar*/
