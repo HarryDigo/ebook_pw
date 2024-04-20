@@ -16,6 +16,7 @@
         <style>
             @import url(css/style.css);
         </style>
+        <script src="js/script.js"></script>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
@@ -23,22 +24,38 @@
 
         <header style="background-color: #414549; height: 20%; overflow: hidden;">
 
-            <div style="height: 65%;"> <!--Header-->
+            <div style="height: 65%; display: flex; overflow: hidden;"> <!--Header-->
                 <div class="center_content" style="height: 100%; width: 10%;">
-                    <img src="img/icon_graph.png" style="max-height: 80%; border-radius: 20%;">
+                    <img src="img/icon_graph.png" style="max-height: 80%; border-radius: 25%;">
+                </div>
+
+                <div class="center_content">
+                    <h1>
+                        Mátemática<br>
+                        Funções e Gráficos    
+                    </h1>
                 </div>
             </div>
 
             <div style="height: 35%; background-color: #292d32;">
                 <ul class="horizontal my_navbar" style="height: 100%;width: 85%; float: right;"> <!--Navbar horizontal-->
                     <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Página inicial</span></div></a>
+                        <a class="active page_button" onclick="selectPage(this, 'initial')"><div class="center_content"><span>Página inicial</span></div></a>
                     </li>
                     <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Google</span></div></a>
+                        <a class="page_button" onclick="selectPage(this, 'first_degree')"><div class="center_content"><span>Primeiro grau</span></div></a>
                     </li>
                     <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Google</span></div></a>
+                        <a class="page_button" onclick="selectPage(this)"><div class="center_content"><span>Quadrática</span></div></a>
+                    </li>
+                    <li>
+                        <a class="page_button" onclick="selectPage(this)"><div class="center_content"><span>Cúbica</span></div></a>
+                    </li>
+                    <li>
+                        <a class="page_button" onclick="selectPage(this)"><div class="center_content"><span>Recíproca</span></div></a>
+                    </li>
+                    <li>
+                        <a class="page_button" onclick="selectPage(this)"><div class="center_content"><span>Circular</span></div></a>
                     </li>
                 </ul>
             </div>
@@ -48,34 +65,87 @@
         <main style="height: 70%; overflow: hidden; display: flex;">
             <section style="width: 15%; height: 100%; background-color: #292d32;">
                 <ul class="vertical my_navbar" style="background-color: inherit;"> <!--Navbar vertical-->
-                    <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Página inicial</span></div></a>
-                    </li>
-                    <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Google</span></div></a>
-                    </li>
-                    <li>
-                        <a href=javascript:void(0)><div class="center_content"><span>Google</span></div></a>
-                    </li>
+                    <div class="page_navbar" id="initial_navbar"> <!--Navbar da página inicial--> 
+                        <li>
+                            <a class="active first topic_button" onclick="selectTopic(this, 'initial', 'default')"><div class="center_content"><span>Página inicial</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'initial', 'function')"><div class="center_content"><span>O que são funções?</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this)"><div class="center_content"><span>Google</span></div></a>
+                        </li>
+                    </div>
+
+                    <div class="page_navbar" id="first_degree_navbar" style="display: none;"> <!--Navbar do primeiro grau-->
+                        <li>
+                            <a class="active first topic_button" onclick="selectTopic(this, 'first_degree', 'default')"><div class="center_content"><span>Teste</span></div></a>
+                        </li>
+                    </div>
                 </ul>
             </section>
-            <section style="overflow: auto; width: 85%;">
-                <div style="padding: 40px 100px;"> <!--Página inicial-->
+            <section style="overflow: auto; width: 85%;"> <!--Conteúdo principal-->
+                <div class="page" id="initial"> <!--Página inicial-->
 
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <h1>Título Placeholder</h1>
+                    <div class="topic" id="initial_default" style="display: block;">
+                        <div class="title"><h1>template</h1></div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aliquam eveniet aliquid fugit nisi ipsam, adipisci maxime repellendus, veniam modi magni natus vitae? Assumenda sunt quo doloribus. Quas, laborum explicabo! <br>
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi perspiciatis odit, autem, cupiditate magni at possimus asperiores ab nulla omnis sint architecto repudiandae recusandae molestias aliquid error quae perferendis est?
+                        </p>
                     </div>
 
-                    <div style="width: 50%; float: right; height:  3000px; text-align: justify; padding: 0 20px;">
-                        <div style="margin-top:2000px">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum ullam commodi fugit debitis adipisci, repellat neque at quasi autem. Sunt optio saepe error assumenda cupiditate! Animi neque ratione est. Deleniti.
-                        </div>
+                    <div class="topic" id="initial_function" style="display: none;">
+                        <div class="title"><h1>O que são funções?</h1></div>
+
+                        <p>
+                            Na Matemática, função corresponde a uma associação dos elementos de dois conjuntos, ou seja, a função indica como os elementos estão relacionados. <br>
+                            <br>    
+                            Por exemplo, uma função de A em B significa associar cada elemento pertencente ao conjunto A a um único elemento que compõe o conjunto B, sendo assim, um valor de A não pode estar ligado a dois valores de B.
+                        </p>
+
+                        <div><img src="img/funcao_definicao.png"></div>
+
+                        <span class="small">Notação para função: f: A → B (lê-se: f de A em B).</span>
+
+                        <div class="title"><h2>Representação das funções</h2></div>
+
+                        <p>
+                            Em uma função f: A → B o conjunto A é chamado de domínio (D) e o conjunto B recebe o nome de contradomínio (CD). <br>
+                            <br>
+                            Um elemento de B relacionado a um elemento de A recebe o nome de imagem pela função. Agrupando todas as imagens de B temos um conjunto imagem, que é um subconjunto do contradomínio. <br>
+                            <br>
+                            <b>Exemplo</b>: observe os conjuntos A = {1, 2, 3, 4} e B = {1, 2, 3, 4, 5, 6, 7, 8}, com a função que determina a relação entre os elementos f: A → B é x → 2x. Sendo assim, f(x) = 2x e cada x do conjunto A é transformado em 2x no conjunto B.
+                        </p>
+
+                        <img src="img/funcao_exemplo.png">
+                        <br><br>
+                        <p>
+                            Note que o conjunto de A {1, 2, 3, 4} são as entradas, "multiplicar por 2" é a função e os valores de B {2, 4, 6, 8}, que se ligam aos elementos de A, são os valores de saída. <br>
+                            <br>
+                            Portanto, para essa função: <br>
+                            <br>
+                            O domínio é {1, 2, 3, 4} <br>
+                            O contradomínio é {1, 2, 3, 4, 5, 6, 7, 8} <br>
+                            O conjunto imagem é {2, 4, 6, 8}
+                        </p>
+
+                        <br>
+                        <br>
+                        <span class="small">ASTH, Rafael. Função: o que é, tipos de funções e gráficos. <b>Toda Matéria</b>, <i>[s.d.]</i>. Disponível em: <a href="https://www.todamateria.com.br/funcao/">https://www.todamateria.com.br/funcao/</a></span>
                     </div>
 
-                    <div style="width: 50%; float: right; height: 100%; text-align: justify; padding: 0 20px;">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum ullam commodi fugit debitis adipisci, repellat neque at quasi autem. Sunt optio saepe error assumenda cupiditate! Animi neque ratione est. Deleniti.
+                </div>
+                <div class="page" id="first_degree" style="display: none;"> <!--Primeiro grau-->
+
+                    <div class="topic" id="first_degree_default" style="display: block;">
+                        <div class="title"><h1>primneiro gau template</h1></div>
+
+                        <img src="img/icon_graph.png">
                     </div>
-                    
+
                 </div>
             </section>
         </main>
