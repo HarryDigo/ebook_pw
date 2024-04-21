@@ -26,7 +26,7 @@
 
             <div style="height: 65%; display: flex; overflow: hidden;"> <!--Header-->
                 <div class="center_content" style="height: 100%; width: 10%;">
-                    <img src="img/icon_graph.png" style="max-height: 80%; border-radius: 25%;">
+                    <img src="img/icon_graph.png" style="max-height: 80%; border-radius: 15%;">
                 </div>
 
                 <div class="center_content">
@@ -38,7 +38,7 @@
             </div>
 
             <div style="height: 35%; background-color: #292d32;">
-                <ul class="horizontal my_navbar" style="height: 100%;width: 85%; float: right;"> <!--Navbar horizontal-->
+                <ul class="horizontal my_navbar" style="height: 100%;width: 85%; float: right; overflow: auto;"> <!--Navbar horizontal-->
                     <li>
                         <a class="active page_button" onclick="selectPage(this, 'initial')"><div class="center_content"><span>Página inicial</span></div></a>
                     </li>
@@ -63,8 +63,8 @@
         </header>
 
         <main style="height: 70%; overflow: hidden; display: flex;">
-            <section style="width: 15%; height: 100%; background-color: #292d32;">
-                <ul class="vertical my_navbar" style="background-color: inherit;"> <!--Navbar vertical-->
+            <section style="width: 15%; height: 100%; background-color: #292d32; overflow: auto;"> <!--Navbar vertical-->
+                <ul class="vertical my_navbar" style="background-color: inherit;"> 
                     <div class="page_navbar" id="initial_navbar"> <!--Navbar da página inicial--> 
                         <li>
                             <a class="active first topic_button" onclick="selectTopic(this, 'initial', 'default')"><div class="center_content"><span>Página inicial</span></div></a>
@@ -73,7 +73,10 @@
                             <a class="topic_button" onclick="selectTopic(this, 'initial', 'function')"><div class="center_content"><span>O que são funções?</span></div></a>
                         </li>
                         <li>
-                            <a class="topic_button" onclick="selectTopic(this)"><div class="center_content"><span>Google</span></div></a>
+                            <a class="topic_button" onclick="selectTopic(this, 'initial', 'cartesian')"><div class="center_content"><span>Plano cartesiano</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'initial', 'graphic')"><div class="center_content"><span>Gráfico de uma função</span></div></a>
                         </li>
                     </div>
 
@@ -81,19 +84,33 @@
                         <li>
                             <a class="active first topic_button" onclick="selectTopic(this, 'first_degree', 'default')"><div class="center_content"><span>Teste</span></div></a>
                         </li>
+                        <li>
+                            <a class="active first topic_button" onclick="selectTopic(this, 'first_degree', 'default')"><div class="center_content"><span>Bolas</span></div></a>
+                        </li>
                     </div>
                 </ul>
             </section>
-            <section style="overflow: auto; width: 85%;"> <!--Conteúdo principal-->
+            
+            <section id="content" style="overflow: auto; width: 85%;"> <!--Conteúdo principal-->
                 <div class="page" id="initial"> <!--Página inicial-->
 
                     <div class="topic" id="initial_default" style="display: block;">
-                        <div class="title"><h1>template</h1></div>
+                        <div class="title"><h1>Página inicial</h1></div>
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aliquam eveniet aliquid fugit nisi ipsam, adipisci maxime repellendus, veniam modi magni natus vitae? Assumenda sunt quo doloribus. Quas, laborum explicabo! <br>
+                            Boa tarde, esse site é um projeto de PW do 2° DS da escola ETEC Bento Quirino feito por Rodrigo Scatolin Flora do Rio <br>
                             <br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi perspiciatis odit, autem, cupiditate magni at possimus asperiores ab nulla omnis sint architecto repudiandae recusandae molestias aliquid error quae perferendis est?
+                            Conteúdos: <br>
+                            Introdução a funções, planos cartesianos, e gráficos de funções; <br>
+                            Definição e exemplos de gráficos do primeiro grau; <br>
+                            Definição, cálculos e exemplos de funções quadráticas (segundo grau); <br>
+                            Definição, cálculos e exemplos de funções cúbicas (terceiro grau); <br>
+                            Definição e exemplos de funções exponenciais; <br>
+                            Definição e exemplos de funções recíprocras; <br>
+                            Definição e exemplos de funções circulares; <br>
+                            (Possivelmente) Uma calculadora para tais tipos de funções (não gráfica); <br>
+                            <br>
+                            : )
                         </p>
                     </div>
 
@@ -137,7 +154,101 @@
                         <span class="small">ASTH, Rafael. Função: o que é, tipos de funções e gráficos. <b>Toda Matéria</b>, <i>[s.d.]</i>. Disponível em: <a href="https://www.todamateria.com.br/funcao/">https://www.todamateria.com.br/funcao/</a></span>
                     </div>
 
+                    <div class="topic" id="initial_cartesian" style="display: none;">
+                        <div class="title"><h1>Plano cartesiano</h1></div>
+
+                        <p>
+                            <b>Plano cartesiano</b> é um objeto matemático formado por uma malha quadriculada. Cada ponto dessa malha é associado a dois números reais que determinam a localização desse ponto. Esses números são as coordenadas do ponto e indicam sua posição em relação a duas retas perpendiculares chamadas de eixos.
+                        </p>
+
+                        <div class="title"><h2>Como fazer o plano cartesiano?</h2></div>
+
+                        <p>
+                            Para construir um plano cartesiano, devemos traçar duas retas reais numeradas e perpendiculares, uma horizontal e outra vertical. Os números em cada uma dessas retas serão utilizados para indicar a localização dos pontos sobre esse plano. O ponto de encontro das duas retas corresponde ao ponto em que, em cada reta, está associado o número 0.
+                        </p>
+
+                        <div class="center_content">
+                            <img src="img/cartesiano_exemplo.png" style="border-radius: 10%;">
+                        </div>
+
+                        <div class="center_content"><span class="small">Exemplo de plano cartesiano</span></div>
+
+                        <div class="title"><h2>Elementos de um plano cartesiano</h2></div>
+
+                        <ul>
+                            <li>Eixo das ordenadas: reta vertical utilizada na construção do plano cartesiano, também conhecida como eixo do y.</li>
+                            <li>Eixo das abscissas: reta horizontal utilizada na construção do plano cartesiano, também conhecida como eixo do x.</li>
+                            <li>Origem: ponto de encontro entre os eixos.</li>
+                            <li>Quadrantes: as quatro regiões formadas pelo cruzamento dos dois eixos.
+                                <ul style="list-style-type: circle;">
+                                    <li>O 1° quadrante é a região em que os valores de x e de y são positivos.</li>
+                                    <li>O 2° quadrante é a região em que os valores de x são negativos e de y são positivos.</li>
+                                    <li>O 3° quadrante é a região em que os valores de x e de y são negativos.</li>
+                                    <li>O 4° quadrante é a região em que os valores de x são positivos e de y são negativos.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="center_content">
+                            <img src="img/cartesiano_quadrantes.png" style="border-radius: 10%;">
+                        </div>
+
+                        <div class="center_content"><span class="small">Os quatro quadrantes do plano cartesiano.</span></div>
+
+                        <div class="title"><h2>Coordenadas do plano cartesiano</h2></div>
+
+                        <p>
+                            As coordenadas de um ponto no plano cartesiano são os números que indicam sua posição. Cada ponto no plano cartesiano possui duas coordenadas: a primeira em relação ao eixo das abcissas e a segunda em relação ao eixo das ordenadas. <br>
+                            <br>
+                            Dado um ponto no plano cartesiano, encontramos sua coordenada em relação ao eixo das abcissas ao traçar um segmento perpendicular a esse eixo (horizontal). Já para determinar a coordenada em relação ao eixo das ordenadas, traçamos um segmento perpendicular ao eixo vertical. <br>
+                            <br>
+                            Representamos as coordenadas ao lado do ponto por um par ordenado no formato (x,y), conforme os exemplos na imagem abaixo.
+                        </p>
+
+                        <div class="center_content"><img src="img/cartesiano_coordenadas.png" style="border-radius: 10%;"></div>
+
+                        <div class="title"><h2>Para que serve o plano cartesiano?</h2></div>
+
+                        <p>
+                            O plano cartesiano é utilizado como instrumento de localização. Uma das aplicações que se assemelham à estrutura do plano cartesiano é o sistema de coordenadas geográficas, que indica a localização de um ponto sobre a superfície terrestre. <br>
+                            <br>
+                            Nesse sistema, o eixo horizontal é a Linha do Equador (que inclusive cruza o território brasileiro), e o vertical é o Meridiano de Greenwich. Cada coordenada é medida em graus de acordo com o ângulo formado entre o centro da terra, o eixo analisado e o ponto de interesse sobre a superfície. <br>
+                        </p>
+
+                        <br>
+                        <br>
+                        <span class="small">RIZZO, Maria Luiza Alves. "O que é plano cartesiano?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm</a></span>
+                    </div>
+
+                    <div class="topic" id="initial_graphic" style="display: none;">
+                        <div class="title"><h1>Gráfico de uma função</h1></div>
+                    
+                        <p>
+                            O gráfico de uma função é a representação no plano cartesiano da relação entre o domínio e a imagem da função. Com o gráfico, podemos prever o comportamento de uma função.
+                        </p>
+
+                        <div class="center_content"><img src="img/grafico.png" style="border-radius: 10%;"></div>
+
+                        <div class="center_content"><span class="small">Toda função possui uma representação gráfica.</span></div>
+
+                        <p style="margin-top: 21px;">
+                            O gráfico de uma função é uma representação que nos permite analisar o comportamento da função, mostrando qual é a relação existente entre os valores do domínio e do contradomínio da função. Cada tipo de função possui um gráfico específico. Por exemplo, o gráfico de uma função polinomial de 1º grau é sempre uma reta; já o gráfico de uma função polinomial de 2º grau é sempre uma parábola. <br>
+                            <br>
+                            Para fazer a representação gráfica da função, é necessário conhecer a imagem para alguns valores do domínio. Com base na representação desses pontos de domínio e imagem no plano cartesiano, torna-se possível fazer a representação do gráfico da função.
+                        </p>
+
+                        <div class="title"><h2>Tipos de gráficos de funções</h2></div>
+
+                        <p>
+                            O gráfico da função depende diretamente da lei de formação da função. Cada função possui um gráfico específico cuja representação pode ser feita no plano cartesiano. As funções polinomiais de 1º grau, por exemplo, possuem gráficos iguais a uma reta. Essa reta pode se posicionar de diferentes maneiras no plano cartesiano a depender da lei de formação da função.
+                        </p>
+
+                        <br>
+                        <br>
+                        <span class="small">OLIVEIRA, Raul Rodrigues de. "Gráfico de uma função"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/matematica/como-construir-grafico-uma-funcao.htm">https://brasilescola.uol.com.br/matematica/como-construir-grafico-uma-funcao.htm</a></span>
+                    </div>
                 </div>
+
                 <div class="page" id="first_degree" style="display: none;"> <!--Primeiro grau-->
 
                     <div class="topic" id="first_degree_default" style="display: block;">
@@ -151,7 +262,7 @@
         </main>
 
         <footer class="center_content" style="height: 10%; overflow: hidden; background-color: #111519;"> <!--footer-->
-            <span class="small">Copyright &copy; 2024, Rodrigo Scatolin Flora do Rio. All rights reserved</span class="small">
+            <span class="small">Copyright &copy; 2024, Rodrigo Scatolin Flora do Rio. All rights reserved</span>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
