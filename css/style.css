@@ -50,7 +50,7 @@ ul.my_navbar {
 ul.my_navbar li a {
     display: block;
     background-color: #313539;
-    color: white;
+    color: #dee2e6;
     transition: all 0.3s;
     text-decoration: none;
     cursor: pointer;
