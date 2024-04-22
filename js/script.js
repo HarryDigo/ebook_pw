@@ -1,7 +1,7 @@
 function selectPage(element, page) { //seleciona página
     if (element.className.includes("active")) return;
 
-    let target = document.getElementById(page);
+    let target = document.getElementById(page); 
 
     let page_navbar = document.getElementById(page+"_navbar");
 
@@ -30,6 +30,8 @@ function selectPage(element, page) { //seleciona página
 
     for (let i = 0; i < topic_buttons.length; i++) topic_buttons[i].classList.remove("active"); //essa parte atova o botão de tópico padrão
     page_navbar.querySelector(".first").classList.add("active");                                //
+    
+    document.getElementById("content").scrollTop = 0; //volta o scroll para o topo
 }
 
 function selectTopic(element, page, topic) { //seleciona tópico (basicamente uma cópia da função acima)
@@ -47,4 +49,6 @@ function selectTopic(element, page, topic) { //seleciona tópico (basicamente um
 
     for (let i = 0; i < topic_buttons.length; i++) topic_buttons[i].classList.remove("active"); //essa parte ativa o botão de tópico correto
     element.classList.add("active");                                                            //
+    
+    document.getElementById("content").scrollTop = 0; //volta o scroll para o topo
 }

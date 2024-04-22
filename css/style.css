@@ -20,14 +20,24 @@
     cursor: default !important;
 }
 
+.topic_button div {
+    padding: 0 10px;
+}
+
 span.small {font-size: smaller;} /*fonte menor (copyright e coisas assim)*/
 
+.page, .topic, .page_navbar {display: none;}
 .page {padding: 40px 120px;}
 
 div.title:first-child {margin: 0 0 30px 0;}
-div.title {margin: 30px 0 30px 0;}
+div.title {
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
 
 img {max-width: 100%;}
+
+input {max-width: 60%;}
 
 /*Navbar(s) (Template originalmente de https://www.w3schools.com/css/css_navbar.asp, mas completamente modificado)
 
@@ -43,7 +53,7 @@ ul.my_navbar {
 ul.my_navbar li a {
     display: block;
     background-color: #313539;
-    color: white;
+    color: #dee2e6;
     transition: all 0.3s;
     text-decoration: none;
     cursor: pointer;
@@ -71,3 +81,20 @@ ul.vertical.my_navbar li a {padding: 16px 0 16px 0;}
 ul.vertical.my_navbar li:first-child {margin-top: 5px;}
 
 /*Fim do navbar*/
+
+/*Tabelas da calculadora*/
+
+table {
+    width: 80%;
+    text-align: center;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+table th{
+    border: 2px solid #5096f0;
+}
+
+table td {
+    border: 2px solid #dee2e6;
+}
