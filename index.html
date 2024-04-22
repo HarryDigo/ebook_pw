@@ -54,6 +54,12 @@
                     <li>
                         <a class="page_button" onclick="selectPage(this, 'exponential')"><div class="center_content"><span>Exponencial</span></div></a>
                     </li>
+                    <li>
+                        <a class="page_button" onclick="selectPage(this, 'calculator')"><div class="center_content"><span>Calculadora</span></div></a>
+                    </li>
+                    <li style="float: right;">
+                        <a class="page_button" onclick="selectPage(this, 'credits')" style="margin-left: auto;"><div class="center_content"><span>Créditos</span></div></a>
+                    </li>
                 </ul>
             </div>
 
@@ -77,7 +83,7 @@
                         </li>
                     </div>
 
-                    <div class="page_navbar" id="first_degree_navbar" style="display: none;"> <!--Navbar do primeiro grau-->
+                    <div class="page_navbar" id="first_degree_navbar"> <!--Navbar do primeiro grau-->
                         <li>
                             <a class="first topic_button" onclick="selectTopic(this, 'first_degree', 'default')"><div class="center_content"><span>Definição</span></div></a>
                         </li>
@@ -86,7 +92,7 @@
                         </li>
                     </div>
 
-                    <div class="page_navbar" id="quadratic_navbar" style="display: none;"> <!--Navbar quadrática-->
+                    <div class="page_navbar" id="quadratic_navbar"> <!--Navbar quadrática-->
                         <li>
                             <a class="first topic_button" onclick="selectTopic(this, 'quadratic', 'default')"><div class="center_content"><span>Definição</span></div></a>
                         </li>
@@ -98,7 +104,7 @@
                         </li>
                     </div>
 
-                    <div class="page_navbar" id="cubic_navbar" style="display: none;"> <!--Navbar cúbica-->
+                    <div class="page_navbar" id="cubic_navbar"> <!--Navbar cúbica-->
                         <li>
                             <a class="first topic_button" onclick="selectTopic(this, 'cubic', 'default')"><div class="center_content"><span>Definição</span></div></a>
                         </li>
@@ -107,15 +113,39 @@
                         </li>
                     </div>
 
-                    <div class="page_navbar" id="exponential_navbar" style="display: none;"> <!--Navbar exponencial-->
+                    <div class="page_navbar" id="exponential_navbar"> <!--Navbar exponencial-->
                         <li>
                             <a class="first topic_button" onclick="selectTopic(this, 'exponential', 'default')"><div class="center_content"><span>Definição</span></div></a>
                         </li>
                         <li>
-                            <a class="topic_button" onclick="selectTopic(this, 'exponential')"><div class="center_content"><span>Propriedades</span></div></a>
+                            <a class="topic_button" onclick="selectTopic(this, 'exponential', 'properties')"><div class="center_content"><span>Propriedades</span></div></a>
                         </li>
                         <li>
-                            <a class="topic_button" onclick="selectTopic(this, 'exponential')"><div class="center_content"><span>Exemplos</span></div></a>
+                            <a class="topic_button" onclick="selectTopic(this, 'exponential', 'exemplos')"><div class="center_content"><span>Exemplos</span></div></a>
+                        </li>
+                    </div>
+
+                    <div class="page_navbar" id="calculator_navbar"> <!--Navbar calculadora-->
+                        <li>
+                            <a class="first topic_button" onclick="selectTopic(this, 'calculator', 'default')"><div class="center_content"><span>Primeiro grau</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'calculator', 'quadratic')"><div class="center_content"><span>Quadrática</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'calculator', 'cubic')"><div class="center_content"><span>Cúbica</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'calculator', 'exponential')"><div class="center_content"><span>Exponencial</span></div></a>
+                        </li>
+                    </div>
+
+                    <div class="page_navbar" id="credits_navbar">
+                        <li>
+                            <a class="first topic_button" onclick="selectTopic(this, 'credits', 'default')"><div class="center_content"><span>Créditos</span></div></a>
+                        </li>
+                        <li>
+                            <a class="topic_button" onclick="selectTopic(this, 'credits', 'bibliography')"><div class="center_content"><span>Bibliografia</span></div></a>
                         </li>
                     </div>
                 </ul>
@@ -128,21 +158,21 @@
                         <div class="title"><h1>Página inicial</h1></div>
 
                         <p>
-                            Boa tarde, esse site é um projeto de PW do 2° DS da escola ETEC Bento Quirino feito por Rodrigo Scatolin Flora do Rio <br>
+                            Este site é um projeto de PW do 2° DS da escola ETEC Bento Quirino feito por Rodrigo Scatolin Flora do Rio <br>
                             <br>
-                            Conteúdos: <br>
-                            Introdução a funções, planos cartesianos, e gráficos de funções; <br>
-                            Definição e exemplos de gráficos do primeiro grau; <br>
-                            Definição, cálculos e exemplos de funções quadráticas (segundo grau); <br>
-                            Definição e exemplos de funções cúbicas (terceiro grau); <br>
-                            Definição e exemplos de funções exponenciais; <br>
-                            (Possivelmente) Uma calculadora para tais tipos de funções (não gráfica); <br>
-                            <br>
-                            UwU
+                            Conteúdos:
+                            <ul>
+                                <li>Introdução a funções, planos cartesianos, e gráficos de funções;</li>
+                                <li>Definição e exemplos de gráficos do primeiro grau;</li>
+                                <li>Definição, cálculos e exemplos de funções quadráticas (segundo grau);</li>
+                                <li>Definição e exemplos de funções cúbicas (terceiro grau);</li>
+                                <li>Definição, propriedades e exemplos de funções exponenciais;</li>
+                                <li>Uma calculadora para tais tipos de funções (não gráfica);</li>
+                            </ul>
                         </p>
                     </div>
 
-                    <div class="topic" id="initial_function" style="display: none;">
+                    <div class="topic" id="initial_function">
                         <div class="title"><h1>O que são funções?</h1></div>
 
                         <p>
@@ -182,7 +212,7 @@
                         <span class="small">ASTH, Rafael. Função: o que é, tipos de funções e gráficos. <b>Toda Matéria</b>, <i>[s.d.]</i>. Disponível em: <a href="https://www.todamateria.com.br/funcao/">https://www.todamateria.com.br/funcao/</a></span>
                     </div>
 
-                    <div class="topic" id="initial_cartesian" style="display: none;">
+                    <div class="topic" id="initial_cartesian">
                         <div class="title"><h1>Plano cartesiano</h1></div>
 
                         <p>
@@ -248,7 +278,7 @@
                         <span class="small">RIZZO, Maria Luiza Alves. "O que é plano cartesiano?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm</a></span>
                     </div>
 
-                    <div class="topic" id="initial_graphic" style="display: none;">
+                    <div class="topic" id="initial_graphic">
                         <div class="title"><h1>Gráfico de uma função</h1></div>
                     
                         <p>
@@ -277,9 +307,9 @@
                     </div>
                 </div>
 
-                <div class="page" id="first_degree" style="display: none;"> <!--Primeiro grau-->
+                <div class="page" id="first_degree"> <!--Primeiro grau-->
 
-                    <div class="topic" id="first_degree_default" style="display: none;">
+                    <div class="topic" id="first_degree_default">
                         <div class="title"><h1>Função de 1° grau</h1></div>
 
                         <p>
@@ -306,7 +336,7 @@
                         </p>
                     </div>
 
-                    <div class="topic" id="first_degree_exemplos" style="display: none;">
+                    <div class="topic" id="first_degree_exemplos">
                         <div class="title" style="margin: 0;"><h1>Exemplos</h1></div>
 
                         <div style="display: flex;">
@@ -346,8 +376,8 @@
 
                 </div>
 
-                <div class="page" id="quadratic" style="display: none;"> <!--Quadrática-->
-                    <div class="topic" id="quadratic_default" style="display: none;">
+                <div class="page" id="quadratic"> <!--Quadrática-->
+                    <div class="topic" id="quadratic_default">
                         <div class="title"><h1>Definição</h1></div>
 
                         <p>
@@ -399,7 +429,7 @@
                         <span class="small">SILVA, Luiz Paulo Moreira. "O que é função do segundo grau?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm</a></span>
                     </div>
 
-                    <div class="topic" id="quadratic_operations" style="display: none;">
+                    <div class="topic" id="quadratic_operations">
                         <div class="title"><h1>Cálculos</h1></div>
 
                         <div class="title"><h2>Raízes da função do segundo grau</h2></div>
@@ -462,7 +492,7 @@
                         <span class="small">SILVA, Luiz Paulo Moreira. "O que é função do segundo grau?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm</a></span>
                     </div>
 
-                    <div class="topic" id="quadratic_exemplos" style="display: none;">
+                    <div class="topic" id="quadratic_exemplos">
                         <div class="title" style="margin: 0;"><h1>Exemplos</h1></div>
 
                         <div style="display: flex;">
@@ -501,8 +531,8 @@
                     </div>                    
                 </div>
 
-                <div class="page" id="cubic" style="display: none;"> <!--Cúbica-->
-                    <div class="topic" id="cubic_default" style="display: none;">
+                <div class="page" id="cubic"> <!--Cúbica-->
+                    <div class="topic" id="cubic_default">
                         <div class="title"><h1>Definição</h1></div>
 
                         <p>
@@ -512,7 +542,7 @@
                         </p>
                     </div>
 
-                    <div class="topic" id="cubic_exemplos" style="display: none;">
+                    <div class="topic" id="cubic_exemplos">
                         <div class="title" style="margin: 0;"><h1>Exemplos</h1></div>
 
                         <div style="display: flex;">
@@ -541,7 +571,7 @@
                     </div>     
                 </div>
 
-                <div class="page" id="exponential" style="display: none;">
+                <div class="page" id="exponential"> <!--Exponencial-->
                     <div class="topic" id="exponential_default">
                         <div class="title"><h1>Definição</h1></div>
 
@@ -554,12 +584,469 @@
                         <div class="title"><h2>O que é função exponencial?</h2></div>
 
                         <p>
-                            Como o nome sugere, o termo exponencial está ligado a expoente. Então, a definição de função exponencial é uma função cujo domínio é o conjunto dos números reais, e o contradomínio é o conjunto dos números reais positivos não nulos, descrito por f: ℝ → ℝ. A sua lei de formação é descrita pela equação f(x) = ax, em que a é um número real qualquer, positivo, não nulo e que recebe o nome de base. <br>
+                            Como o nome sugere, o termo exponencial está ligado a expoente. Então, a definição de função exponencial é uma função cujo domínio é o conjunto dos números reais, e o contradomínio é o conjunto dos números reais positivos não nulos, descrito por f: ℝ → ℝ. A sua lei de formação é descrita pela equação f(x) = a<sup>x</sup>, em que a é um número real qualquer, positivo, não nulo e que recebe o nome de base. <br>
                             <br>
                             Na lei de formação, f(x) pode ser descrito também como y e, assim como nas demais funções, ele é conhecido como variável dependente, porque seu valor depende de x, que é conhecido como variável independente. <br>
                         </p>
 
+                        <div class="title"><h2>Tipos de função exponencial</h2></div>
+
+                        <p>
+                            As funções exponencias podem ser classificadas em dois casos distintos. Levando em consideração o comportamento da função, ela pode ser crescente ou decrescente. <br>
+                            <br>
+                            Uma função exponencial é dita crescente se, à medida que o valor de x aumenta, o valor de f(x) também aumenta. Isso ocorre quando a base é maior que 1, ou seja: a > 1.
+                        </p>
+                        <br>
+                        <div class="center_content"><img src="img/exponencial_crescente.png" style="border-radius: 10%;"></div>
+
+                        <div class="center_content"><span class="small">Gráfico de uma função exponencial crescente</span></div>
+                        <br>
+                        <p>
+                            Uma função exponencial é considerada decrescente se, à medida que o valor de x aumenta, o valor de f(x) diminui. Isso ocorre quando a base é um número entre 0 e 1, ou seja, 0 < a < 1.
+                        </p>
+                        <br>
+                        <div class="center_content"><img src="img/exponencial_decrescente.png" style="border-radius: 10%;"></div>
+
+                        <div class="center_content"><span class="small">Gráfico de uma função exponencial decrescente</span></div>
                         
+                        <br>
+                        <br>
+                        <span class="small">OLIVEIRA, Raul Rodrigues de. "Função exponencial"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm">https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm</a></span>
+                    </div>
+
+                    <div class="topic" id="exponential_properties">
+                        <div class="title"><h1>Propriedades</h1></div>
+
+                        <ul>
+                            <li>1ª Propriedade:</li>
+                            <p>
+                                Em uma função exponencial qualquer, independentemente do valor de sua base a, temos que f(0) = 1. Afinal, sabemos que essa é uma propriedade de potência, ou seja, todo número elevado a 0 é 1. Isso significa que o gráfico vai interceptar o eixo vertical no ponto (0,1) sempre.
+                            </p>
+                            <li>2ª Propriedade:</li>
+                            <p>
+                                A função exponencial é injetora. Dados x1 e x2 tal que x1 ≠ x2, então as imagens também serão diferentes, ou seja, f(x<sub>1</sub>) ≠ f(x<sub>2</sub>), o que significa que, para cada valor da imagem, existe um único valor no domínio que corresponde a essa imagem. <br>
+                                Ser injetiva significa que, para valores diferentes de y, existirá um único valor de x que faz com que f(x) seja igual a y.
+                            </p>
+                            <li>3ª Propriedade:</li>
+                            <p>
+                                É possível saber o comportamento da função de acordo com o valor da sua base. O gráfico será crescente se a base for maior que 1 (a > 1) e decrescente se a base for menor que 1 e menor que 0 (0 < a < 1).
+                            </p>
+                            <li>4ª Propriedade:</li>
+                            <p>
+                                O gráfico da função exponencial está sempre no 1º e 2º quadrantes, pois o contradomínio da função são os reais positivos diferentes de zero.
+                            </p>
+                        </ul>
+
+                        <br>
+                        <br>
+                        <span class="small">OLIVEIRA, Raul Rodrigues de. "Função exponencial"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm">https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm</a></span>
+                    </div>
+
+                    <div class="topic" id="exponential_exemplos">
+                        <div class="title" style="margin: 0;"><h1>Exemplos</h1></div>
+
+                        <div style="display: flex;">
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = 4<sup>x</sup></span></div>
+                                <img src="img/exponencial_exemplo4^x.png" style="border-radius: 10%;">
+                            </div>
+
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = (1/10)<sup>x</sup></span></div>
+                                <img src="img/exponencial_exemplo(1;10)^x.png" style="border-radius: 10%;">
+                            </div>
+
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = 2<sup>x - 2</sup></span></div>
+                                <img src="img/exponencial_exemplo2^(x-2).png" style="border-radius: 10%;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex;">
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = (2/3)<sup>x</sup></span></div>
+                                <img src="img/exponencial_exemplo(2;3)^x.png" style="border-radius: 10%;">
+                            </div>
+
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = 2<sup>x + 3</sup></span></div>
+                                <img src="img/exponencial_exemplo2^(x+3).png" style="border-radius: 10%;">
+                            </div>
+
+                            <div style="width: calc(100%/3); padding: 3%;">
+                                <div class="horizontal_center"><h2 style="font-size: 3vh;"><i>f</i>(x) = (1/5)<sup>x+4</sup></span></div>
+                                <img src="img/exponencial_exemplo(1;5)^(x+4).png" style="border-radius: 10%;">
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+
+                <div class="page" id="calculator"> <!--Calculadora-->
+                    <script src="js/calculator.js"></script>
+
+                    <div class="topic" id="calculator_default">
+                        <div style="display: flex;">
+                            <div style="width: 50%;">
+                                <div class="title"><h1>Primeiro grau</h1></div>
+
+                                <span>Forma geral: <br>f(x) = ax + b <br>y = ax + b</span> <br>
+                                <br>
+                                <div style="margin-bottom: 5px;">
+                                    <span>a: </span><input type="number" id="first_a">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>b: </span><input type="number" id="first_b">
+                                </div>
+                                <input type="button" value="Calcular" onclick="first()">
+                            </div>
+                            <div class="center_content" style="width: 50%; float: right; height: 100%; overflow: auto; padding: 40px 0; background-color: #414549; border-radius: 3vh;">
+                                <table id="first_table">
+                                    <tr>
+                                        <th>x</th>
+                                        <th>f(x) / y</th>
+                                        <th>coordenadas</th>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic" id="calculator_quadratic">
+                        <div style="display: flex;">
+                            <div style="width: 50%;">
+                                <div class="title"><h1>Quadrática</h1></div>
+
+                                <span>Forma geral: <br>f(x) = ax<sup>2</sup> + bx + c <br>y = ax<sup>2</sup> + bx + c</span> <br>
+                                <br>
+                                <div style="margin-bottom: 5px;">
+                                    <span>a: </span><input type="number" id="quadratic_a">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>b: </span><input type="number" id="quadratic_b">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>c: </span><input type="number" id="quadratic_c">
+                                </div>
+                                <input type="button" value="Calcular" onclick="quadratic()">
+                            </div>
+                            <div class="center_content" style="width: 50%; float: right; height: 100%; overflow: auto; padding: 40px 0; background-color: #414549; border-radius: 3vh;">
+                                <table id="quadratic_table">
+                                    <tr>
+                                        <th>x</th>
+                                        <th>f(x) / y</th>
+                                        <th>coordenadas</th>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic" id="calculator_cubic">
+                        <div style="display: flex;">
+                            <div style="width: 50%;">
+                                <div class="title"><h1>Cúbica</h1></div>
+
+                                <span>Forma geral: <br>f(x) = ax<sup>3</sup> + bx<sup>2</sup> + cx + d <br>y = ax<sup>3</sup> + bx<sup>2</sup> + cx + d</span> <br>
+                                <br>
+                                <div style="margin-bottom: 5px;">
+                                    <span>a: </span><input type="number" id="cubic_a">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>b: </span><input type="number" id="cubic_b">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>c: </span><input type="number" id="cubic_c">
+                                </div>
+                                <div style="margin-bottom: 5px;">
+                                    <span>d: </span><input type="number" id="cubic_d">
+                                </div>
+                                <input type="button" value="Calcular" onclick="cubic()">
+                            </div>
+                            <div class="center_content" style="width: 50%; float: right; height: 100%; overflow: auto; padding: 40px 0; background-color: #414549; border-radius: 3vh;">
+                                <table id="cubic_table">
+                                    <tr>
+                                        <th>x</th>
+                                        <th>f(x) / y</th>
+                                        <th>coordenadas</th>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic" id="calculator_exponential">
+                        <div style="display: flex;">
+                            <div style="width: 50%;">
+                                <div class="title"><h1>Exponencial</h1></div>
+
+                                <span>Forma geral: <br>f(x) = a<sup>x</sup> <br>y = a<sup>x</sup></span> <br>
+                                <br>
+                                <div style="margin-bottom: 5px;">
+                                    <span>a: </span><input type="number" id="exponential_a">
+                                </div>
+                                <input type="button" value="Calcular" onclick="exponential()">
+                            </div>
+                            <div class="center_content" style="width: 50%; float: right; height: 100%; overflow: auto; padding: 40px 0; background-color: #414549; border-radius: 3vh;">
+                                <table id="exponential_table">
+                                    <tr>
+                                        <th>x</th>
+                                        <th>f(x) / y</th>
+                                        <th>coordenadas</th>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>‎</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page" id="credits"> <!--Créditos-->
+                    <div class="topic" id="credits_default">
+                        <p>
+                            woohoo acabei :3 <br>
+                            feito por Rodrigo Scatolin Flora do Rio <br>
+                            muito obrigado ao jocas, jomos e kiras pelo suporte durante o caminho <br>
+                            Simone por favor gosta do trabalho, me esforçei <br>
+                            <br>
+                            Link do Figma: <a href="https://www.figma.com/file/vQ127o0oFqJ3LyeX0Wghox/Ebook-PW?type=design&node-id=0%3A1&mode=design&t=giJLMMrqvgajbgVi-1">https://www.figma.com/file/vQ127o0oFqJ3LyeX0Wghox/Ebook-PW?type=design&node-id=0%3A1&mode=design&t=giJLMMrqvgajbgVi-1</a> <br>
+                            Link do Github: <a href="https://github.com/HarryDigo/ebook_pw">https://github.com/HarryDigo/ebook_pw</a> <br>
+                            <br>
+                            Bibliografia/fontes estão na outra aba
+                        </p>
+
+                        <img src="img/yippee.gif" alt="">
+                    </div>
+                    <div class="topic" id="credits_bibliography">
+                        <div class="title">Bibliografia</div>
+
+                        <span class="small">ASTH, Rafael. Função: o que é, tipos de funções e gráficos. <b>Toda Matéria</b>, <i>[s.d.]</i>. Disponível em: <a href="https://www.todamateria.com.br/funcao/">https://www.todamateria.com.br/funcao/</a></span>
+                        <br>
+                        <span class="small">RIZZO, Maria Luiza Alves. "O que é plano cartesiano?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-plano-cartesiano.htm</a></span>
+                        <br>
+                        <span class="small">OLIVEIRA, Raul Rodrigues de. "Gráfico de uma função"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/matematica/como-construir-grafico-uma-funcao.htm">https://brasilescola.uol.com.br/matematica/como-construir-grafico-uma-funcao.htm</a></span>
+                        <br>
+                        <span class="small">SILVA, Luiz Paulo Moreira. "O que é função do segundo grau?"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm">https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-funcao-segundo-grau.htm</a></span>
+                        <br>
+                        <span class="small">OLIVEIRA, Raul Rodrigues de. "Função exponencial"; <i>Brasil Escola</i>. Disponível em: <a href="https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm">https://brasilescola.uol.com.br/matematica/funcao-exponencial-1.htm</a></span>
                     </div>
                 </div>
             </section>
