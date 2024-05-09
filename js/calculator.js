@@ -22,6 +22,35 @@ function first() { //calculadora função de primeiro grau
     }
 
     table.style.opacity = 1; //ativa a tabela com animação :3
+
+    const canvas = document.getElementById("first_canvas");
+    const ctx = canvas.getContext("2d");
+    const p = 20;
+
+    ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = 2;
+    let arr = [];
+
+    a *= 40;
+    b *= 40;
+    for (let i = -10*p; i < 10*p; i++) {
+        x = i/p;
+        y = a*x + b;
+        arr.push([x*40 + 400, 400 - y]);
+    }
+    x = 10*p;
+    y = a*x + b;
+    arr.push([x*40 + 400, 400 - y]);
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        ctx.moveTo(arr[i][0], arr[i][1] + 1);
+        ctx.lineTo(arr[i+1][0], arr[i+1][1] + 1);
+        ctx.stroke();
+    }
+
+    canvas.style.opacity = 1;
 }
 
 function quadratic() { //calculadora função quadrática
@@ -49,6 +78,36 @@ function quadratic() { //calculadora função quadrática
     }
 
     table.style.opacity = 1; //ativa a tabela com animação :3
+
+    const canvas = document.getElementById("quadratic_canvas");
+    const ctx = canvas.getContext("2d");
+    const p = 20;
+
+    ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = 2;
+    let arr = [];
+
+    a *= 40;
+    b *= 40;
+    c *= 40;
+    for (let i = -10*p; i < 10*p; i++) {
+        x = i/p;
+        y = a*x**2 + b*x + c;
+        arr.push([x*40 + 400, 400 - y]);
+    }
+    x = 10*p;
+    y = a*x**2 + b*x + c;
+    arr.push([x*40 + 400, 400 - y]);
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        ctx.moveTo(arr[i][0], arr[i][1] + 1);
+        ctx.lineTo(arr[i+1][0], arr[i+1][1] + 1);
+        ctx.stroke();
+    }
+
+    canvas.style.opacity = 1;
 }
 
 function cubic() { //calculadora função cúbica
@@ -77,6 +136,37 @@ function cubic() { //calculadora função cúbica
     }
 
     table.style.opacity = 1; //ativa a tabela com animação :3
+
+    const canvas = document.getElementById("cubic_canvas");
+    const ctx = canvas.getContext("2d");
+    const p = 20;
+
+    ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = 2;
+    let arr = [];
+
+    a *= 40;
+    b *= 40;
+    c *= 40;
+    d *= 40;
+    for (let i = -10*p; i < 10*p; i++) {
+        x = i/p;
+        y = a*x**3 + b*x**2 + c*x + d;
+        arr.push([x*40 + 400, 400 - y]);
+    }
+    x = 10*p;
+    y = a*x**3 + b*x**2 + c*x + d;
+    arr.push([x*40 + 400, 400 - y]);
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        ctx.moveTo(arr[i][0], arr[i][1] + 1);
+        ctx.lineTo(arr[i+1][0], arr[i+1][1] + 1);
+        ctx.stroke();
+    }
+
+    canvas.style.opacity = 1;
 }
 
 function exponential() { //calculadora função cúbica
@@ -102,4 +192,31 @@ function exponential() { //calculadora função cúbica
     }
 
     table.style.opacity = 1; //ativa a tabela com animação :3
+
+    const canvas = document.getElementById("exponential_canvas");
+    const ctx = canvas.getContext("2d");
+    const p = 20;
+
+    ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = 2;
+    let arr = [];
+
+    for (let i = -10*p; i < 10*p; i++) {
+        x = i/p;
+        y = a**x - 1;
+        arr.push([x, y]);
+    }
+    x = 10;
+    y = a**x - 1;
+    arr.push([x, y]);
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        ctx.moveTo(arr[i][0]*40 + 400, 400 - (arr[i][1] + 1)*40);
+        ctx.lineTo(arr[i+1][0]*40 + 400, 400 - (arr[i+1][1] + 1)*40);
+        ctx.stroke();
+    }
+
+    canvas.style.opacity = 1;
 }
