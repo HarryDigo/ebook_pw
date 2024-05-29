@@ -12,7 +12,7 @@
 
 .vertical_center { /*centraliza o conteudo interno verticalmente*/
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .active { /*botão ativo*/

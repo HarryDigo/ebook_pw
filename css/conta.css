@@ -1,0 +1,14 @@
+.caixa {
+    background-color: #414549;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.linha { 
+    max-width: 100%;
+    padding: 7px 0;
+}
+
+.label {
+    font-size: 20px
+}
